@@ -590,15 +590,15 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(mock-modulos): servicio simulado de desastres y evaluaciones`
 
 ### Fase 6 — Contratos y API (`packages/contratos`, `apps/api`)
-- [ ] Esquemas zod de entrada y salida de cada ruta en `@reconstruccion/contratos` (dinero como string en pesos con regex, fechas, enumeraciones).
-- [ ] `AuthModule`: login con argon2id, emisión y verificación de JWT, guard global, decorador `@UsuarioActual()`.
-- [ ] Controladores de la sección 8, `PresentadorHttp` y filtro de excepciones que produce el formato de error del catálogo.
-- [ ] Composición: tokens de puertos, `useFactory` para interactores, configuración por variables de entorno validada con zod al arrancar.
-- [ ] Subida multipart para evidencias (límite 10 MB, tipos PDF/JPG/PNG) y descarga en streaming desde GridFS.
-- [ ] Despachador del outbox y `RegistradorEventosLog`.
-- [ ] Script de seed idempotente (sección 8) que también crea índices.
-- [ ] Swagger en `/api/docs`.
-- [ ] `Dockerfile` multi-stage.
+- [x] Esquemas zod de entrada y salida de cada ruta en `@reconstruccion/contratos` (dinero como string en pesos con regex, fechas, enumeraciones).
+- [x] `AuthModule`: login con argon2id, emisión y verificación de JWT, guard global, decorador `@UsuarioActual()`.
+- [x] Controladores de la sección 8, `PresentadorHttp` y filtro de excepciones que produce el formato de error del catálogo.
+- [x] Composición: tokens de puertos, `useFactory` para interactores, configuración por variables de entorno validada con zod al arrancar.
+- [x] Subida multipart para evidencias (límite 10 MB, tipos PDF/JPG/PNG) y descarga en streaming desde GridFS.
+- [x] Despachador del outbox y `RegistradorEventosLog`.
+- [x] Script de seed idempotente (sección 8) que también crea índices.
+- [x] Swagger en `/api/docs`.
+- [x] `Dockerfile` multi-stage.
 
 **Aceptación:** con Mongo en replica set y el mock arriba, se puede recorrer por HTTP (Swagger o `curl`) el ciclo completo: login → crear → aprobar (otro usuario) → hitos → iniciar → avance 100 → evidencia de entrega → finalizar; y se observa un 422 con `regla: "R07"` cuando el creador intenta aprobar.
 **Commit:** `feat(api): API REST con NestJS, JWT y composición de la arquitectura limpia`
