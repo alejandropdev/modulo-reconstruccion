@@ -583,8 +583,8 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(infraestructura): adaptadores MongoDB, GridFS, outbox y clientes HTTP`
 
 ### Fase 5 — Servicio mock (`apps/mock-modulos`)
-- [ ] App NestJS con las rutas de la sección 7 y los datos semilla.
-- [ ] `Dockerfile`.
+- [x] App NestJS con las rutas de la sección 7 y los datos semilla.
+- [x] `Dockerfile`.
 
 **Aceptación:** `pnpm --filter mock-modulos dev` responde a todas las rutas; la semilla cubre los cuatro desastres descritos.
 **Commit:** `feat(mock-modulos): servicio simulado de desastres y evaluaciones`
