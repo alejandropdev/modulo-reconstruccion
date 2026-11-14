@@ -1,7 +1,7 @@
 FROM node:24-alpine
 RUN corepack enable
 WORKDIR /app
-COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc tsconfig.base.json ./
 COPY apps/mock-modulos ./apps/mock-modulos
 RUN pnpm install --frozen-lockfile --filter mock-modulos...
 EXPOSE 3001
