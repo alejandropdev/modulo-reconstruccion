@@ -621,10 +621,10 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `chore: docker compose, README y guion de demostración`
 
 ### Fase 9 — Verificación final
-- [ ] `pnpm verificar` y `pnpm test:cobertura` en verde (dominio ≥ 90 %, aplicación ≥ 85 %).
-- [ ] Generar `docs/trazabilidad.md`: tabla regla (R01–R17, C01–C17) → archivo donde se aplica → prueba(s) que la verifican. Toda regla debe tener al menos una prueba; si falta alguna, agrégala.
-- [ ] Recorrer `docs/guion-demo.md` contra el sistema levantado con Docker Compose y corregir lo que falle.
-- [ ] Revisar que cada ADR coincida con lo implementado (versiones reales instaladas incluidas).
+- [x] `pnpm verificar` y `pnpm test:cobertura` en verde (dominio ≥ 90 %, aplicación ≥ 85 %).
+- [x] Generar `docs/trazabilidad.md`: tabla regla (R01–R17, C01–C17) → archivo donde se aplica → prueba(s) que la verifican. Toda regla debe tener al menos una prueba; si falta alguna, agrégala.
+- [x] Recorrer `docs/guion-demo.md` contra el sistema levantado con Docker Compose y corregir lo que falle.
+- [x] Revisar que cada ADR coincida con lo implementado (versiones reales instaladas incluidas).
 
 **Aceptación:** trazabilidad completa sin huecos; guion de demo ejecutado sin errores.
 **Commit:** `docs: trazabilidad de reglas y verificación final`

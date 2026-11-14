@@ -92,4 +92,4 @@ Opción elegida: **Node.js 24 LTS + TypeScript (modo estricto)**, porque al pond
 
 ## Información adicional
 
-Nota de implementación: se usa TypeScript 6 porque `typescript-eslint` aún no soporta TypeScript 7.
+Versiones reales instaladas (noviembre de 2026): Node.js 24.22, pnpm 10.33, TypeScript 6 (`typescript-eslint` aún no soporta TypeScript 7), Vitest 5, NestJS 12, driver `mongodb` 7 (MongoDB 8), zod 4, React 19, Vite 8, Mantine 9. Vitest 5 usa `projects` en `vitest.config.ts` en lugar de `vitest.workspace.ts`. En tiempo de ejecución se usa `tsx` (sin paso de compilación) para la API y el mock.
