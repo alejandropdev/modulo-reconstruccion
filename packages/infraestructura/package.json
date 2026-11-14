@@ -3,7 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
-  "scripts": { "typecheck": "tsc -p tsconfig.json" },
-  "dependencies": { "@reconstruccion/dominio": "workspace:*", "@reconstruccion/aplicacion": "workspace:*" }
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@reconstruccion/aplicacion": "workspace:*",
+    "@reconstruccion/dominio": "workspace:*",
+    "mongodb": "^7.9.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
+  }
 }

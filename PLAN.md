@@ -570,14 +570,14 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(aplicacion): interactores, puertos y pruebas con fakes`
 
 ### Fase 4 — Infraestructura (`packages/infraestructura`)
-- [ ] Conexión Mongo y `ContextoSesion` con `AsyncLocalStorage`.
-- [ ] `UnidadDeTrabajoMongo`.
-- [ ] `MapperProyecto` (documento ↔ instantánea, `Dinero` ↔ `Long`, `FechaCalendario` ↔ `Date` a medianoche UTC) y `RepositorioProyectosMongo` con concurrencia optimista, filtros (`atrasado` con `$elemMatch` sobre hitos) y paginación.
-- [ ] Creación de índices (`crearIndices()`), incluido el único parcial de R05.
-- [ ] `PublicadorOutboxMongo`, `RegistroAuditoriaMongo`, `ParametrosNegocioMongo`, `DirectorioUsuariosMongo`, `AlmacenEvidenciasGridFS`, `RelojSistema`, `GeneradorIdsUuid`.
-- [ ] Clientes HTTP (`fetch` nativo con timeout de 3 s): `ConsultaDesastresHttp`, `ConsultaEvaluacionesHttp`, `ActualizacionEstadoDesastreHttp`; los errores de red o 5xx se traducen a `ServicioExternoNoDisponible`.
-- [ ] Pruebas de integración con `MongoMemoryReplSet`: ida y vuelta del agregado completo; `ConflictoConcurrencia`; índice único de R05 con dos inserciones concurrentes; la transacción revierte agregado + auditoría + outbox juntos; R16 (los arreglos de historial solo crecen tras varias operaciones); GridFS guardar/abrir/eliminar; filtro `atrasado`.
-- [ ] Pruebas de los clientes HTTP contra un servidor `node:http` local levantado en la prueba.
+- [x] Conexión Mongo y `ContextoSesion` con `AsyncLocalStorage`.
+- [x] `UnidadDeTrabajoMongo`.
+- [x] `MapperProyecto` (documento ↔ instantánea, `Dinero` ↔ `Long`, `FechaCalendario` ↔ `Date` a medianoche UTC) y `RepositorioProyectosMongo` con concurrencia optimista, filtros (`atrasado` con `$elemMatch` sobre hitos) y paginación.
+- [x] Creación de índices (`crearIndices()`), incluido el único parcial de R05.
+- [x] `PublicadorOutboxMongo`, `RegistroAuditoriaMongo`, `ParametrosNegocioMongo`, `DirectorioUsuariosMongo`, `AlmacenEvidenciasGridFS`, `RelojSistema`, `GeneradorIdsUuid`.
+- [x] Clientes HTTP (`fetch` nativo con timeout de 3 s): `ConsultaDesastresHttp`, `ConsultaEvaluacionesHttp`, `ActualizacionEstadoDesastreHttp`; los errores de red o 5xx se traducen a `ServicioExternoNoDisponible`.
+- [x] Pruebas de integración con `MongoMemoryReplSet`: ida y vuelta del agregado completo; `ConflictoConcurrencia`; índice único de R05 con dos inserciones concurrentes; la transacción revierte agregado + auditoría + outbox juntos; R16 (los arreglos de historial solo crecen tras varias operaciones); GridFS guardar/abrir/eliminar; filtro `atrasado`.
+- [x] Pruebas de los clientes HTTP contra un servidor `node:http` local levantado en la prueba.
 
 **Aceptación:** `pnpm test` ejecuta las pruebas de integración sin Docker; todas pasan.
 **Commit:** `feat(infraestructura): adaptadores MongoDB, GridFS, outbox y clientes HTTP`
