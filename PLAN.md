@@ -534,11 +534,11 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `chore: estructura del monorepo y herramientas de calidad`
 
 ### Fase 1 — Justificación: ADRs (MADR) y documento resumen
-- [ ] `docs/adr/0000-registrar-decisiones-con-madr.md` … `0013-estrategia-de-pruebas.md` según la tabla 1.4, en español, con el contenido de las secciones 1 a 3 de este plan.
-- [ ] ADR-0001 incluye las tablas 1.2 y 1.3, la conclusión honesta y la tabla de mitigaciones.
-- [ ] ADR-0012 lista todas las reglas complementarias C01–C17 y los puertos agregados (sección 4.3) como desviaciones del diseño, cada una con su justificación.
-- [ ] `docs/justificacion-tecnologica.md`: resumen de una o dos páginas para entregar en el taller (criterios, tabla de trade-offs, puntaje, decisión, mitigaciones, mapa de tecnologías por anillo de la arquitectura limpia y un índice con enlaces a los ADRs).
-- [ ] `docs/adr/README.md` con el índice de ADRs.
+- [x] `docs/adr/0000-registrar-decisiones-con-madr.md` … `0013-estrategia-de-pruebas.md` según la tabla 1.4, en español, con el contenido de las secciones 1 a 3 de este plan.
+- [x] ADR-0001 incluye las tablas 1.2 y 1.3, la conclusión honesta y la tabla de mitigaciones.
+- [x] ADR-0012 lista todas las reglas complementarias C01–C17 y los puertos agregados (sección 4.3) como desviaciones del diseño, cada una con su justificación.
+- [x] `docs/justificacion-tecnologica.md`: resumen de una o dos páginas para entregar en el taller (criterios, tabla de trade-offs, puntaje, decisión, mitigaciones, mapa de tecnologías por anillo de la arquitectura limpia y un índice con enlaces a los ADRs).
+- [x] `docs/adr/README.md` con el índice de ADRs.
 
 **Aceptación:** existen 14 ADRs con todas las secciones MADR; cada decisión D1–D14 queda cubierta por al menos un ADR.
 **Commit:** `docs(adr): justificación de tecnologías en formato MADR`
