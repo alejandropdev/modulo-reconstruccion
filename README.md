@@ -33,6 +33,12 @@ pnpm dev            # api (3000) + mock-modulos (3001) + web (5173)
 
 `pnpm verificar` ejecuta lint, typecheck, reglas de arquitectura y pruebas (las de integración usan `mongodb-memory-server`, sin Docker).
 
+## Estado de la verificación
+
+- `pnpm verificar` (lint, typecheck, arquitectura y 222 pruebas) en verde.
+- `docker compose up --build` y el recorrido completo por HTTP verificados.
+- Recorrido de la web en el navegador verificado manualmente con el guion de [docs/guion-demo.md](docs/guion-demo.md).
+
 ## Usuarios de prueba (contraseña `Clave123*`)
 
 | Id | Correo | Roles |
