@@ -544,13 +544,13 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `docs(adr): justificación de tecnologías en formato MADR`
 
 ### Fase 2 — Dominio (`packages/dominio`)
-- [ ] Value objects `Dinero`, `Porcentaje`, `FechaCalendario`, con pruebas (aritmética exacta, conversión desde y hacia string en pesos, valores inválidos).
-- [ ] `ErrorDominio` y subclases según el catálogo de errores.
-- [ ] Enumeraciones y entidades de la sección 5.
-- [ ] Políticas: `PoliticaTransiciones`, `PoliticaAprobacionPresupuesto`, `PoliticaTipoIntervencion`, `PoliticaCicloDesastre`.
-- [ ] `ProyectoReconstruccion` con todos los métodos de la tabla de la sección 5, eventos de dominio, `version`, `aInstantanea` y `reconstituir`.
-- [ ] Pruebas unitarias: una por regla como mínimo (R04, R06–R17, C01–C05, C08–C17) y las 36 combinaciones de la tabla de transiciones.
-- [ ] Builder de pruebas `unProyecto().enEstado('EnEjecucion').conHito()...` para que las pruebas sean legibles.
+- [x] Value objects `Dinero`, `Porcentaje`, `FechaCalendario`, con pruebas (aritmética exacta, conversión desde y hacia string en pesos, valores inválidos).
+- [x] `ErrorDominio` y subclases según el catálogo de errores.
+- [x] Enumeraciones y entidades de la sección 5.
+- [x] Políticas: `PoliticaTransiciones`, `PoliticaAprobacionPresupuesto`, `PoliticaTipoIntervencion`, `PoliticaCicloDesastre`.
+- [x] `ProyectoReconstruccion` con todos los métodos de la tabla de la sección 5, eventos de dominio, `version`, `aInstantanea` y `reconstituir`.
+- [x] Pruebas unitarias: una por regla como mínimo (R04, R06–R17, C01–C05, C08–C17) y las 36 combinaciones de la tabla de transiciones.
+- [x] Builder de pruebas `unProyecto().enEstado('EnEjecucion').conHito()...` para que las pruebas sean legibles.
 
 **Aceptación:** cobertura de líneas de `dominio` ≥ 90 %; `pnpm arq` confirma 0 dependencias externas; ningún `Date.now`/`new Date()` en `src` (agrega una regla de ESLint `no-restricted-syntax` para `dominio` y `aplicacion`).
 **Commit:** `feat(dominio): agregado ProyectoReconstruccion, políticas y reglas de negocio`
