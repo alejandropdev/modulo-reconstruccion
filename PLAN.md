@@ -521,14 +521,14 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 > Después de cada fase: `pnpm verificar` en verde, criterios de aceptación revisados, casillas marcadas y un commit.
 
 ### Fase 0 — Monorepo y herramientas
-- [ ] `git init`, `.gitignore` (node_modules, dist, coverage, .env, *.log).
-- [ ] `package.json` raíz (`private`, `packageManager: pnpm`, `engines.node >= 24`), `pnpm-workspace.yaml`, `.nvmrc` con `24`.
-- [ ] `tsconfig.base.json` estricto (`strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noImplicitOverride`, `target ES2023`, `module/moduleResolution NodeNext`) y `tsconfig.json` por paquete con referencias de proyecto.
-- [ ] Crear los paquetes vacíos (`dominio`, `aplicacion`, `infraestructura`, `contratos`) y las apps (`api`, `mock-modulos`, `web`) con su `package.json`, declarando **solo** las dependencias permitidas (sección 4.2).
-- [ ] ESLint (typescript-eslint, reglas estrictas, prohibir `any`) + Prettier.
-- [ ] Vitest con `vitest.workspace.ts`; cobertura con `@vitest/coverage-v8`.
-- [ ] `.dependency-cruiser.cjs` con las reglas de la sección 4.2, incluida la prohibición de `node:*` y npm en `dominio`.
-- [ ] Scripts raíz: `lint`, `typecheck`, `arq`, `test`, `test:cobertura`, `verificar` (los cuatro primeros en cadena), `dev`, `build`.
+- [x] `git init`, `.gitignore` (node_modules, dist, coverage, .env, *.log).
+- [x] `package.json` raíz (`private`, `packageManager: pnpm`, `engines.node >= 24`), `pnpm-workspace.yaml`, `.nvmrc` con `24`.
+- [x] `tsconfig.base.json` estricto (`strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noImplicitOverride`, `target ES2023`, `module/moduleResolution NodeNext`) y `tsconfig.json` por paquete con referencias de proyecto.
+- [x] Crear los paquetes vacíos (`dominio`, `aplicacion`, `infraestructura`, `contratos`) y las apps (`api`, `mock-modulos`, `web`) con su `package.json`, declarando **solo** las dependencias permitidas (sección 4.2).
+- [x] ESLint (typescript-eslint, reglas estrictas, prohibir `any`) + Prettier.
+- [x] Vitest con `vitest.workspace.ts`; cobertura con `@vitest/coverage-v8`.
+- [x] `.dependency-cruiser.cjs` con las reglas de la sección 4.2, incluida la prohibición de `node:*` y npm en `dominio`.
+- [x] Scripts raíz: `lint`, `typecheck`, `arq`, `test`, `test:cobertura`, `verificar` (los cuatro primeros en cadena), `dev`, `build`.
 
 **Aceptación:** `pnpm install && pnpm verificar` pasa. Una importación de prueba de `mongodb` dentro de `dominio` hace fallar `pnpm arq` (verifícalo y revierte).
 **Commit:** `chore: estructura del monorepo y herramientas de calidad`
