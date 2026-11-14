@@ -604,10 +604,10 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(api): API REST con NestJS, JWT y composición de la arquitectura limpia`
 
 ### Fase 7 — Frontend (`apps/web`)
-- [ ] Proyecto Vite + React + TS, Mantine, React Router, TanStack Query, cliente HTTP con token.
-- [ ] Pantallas de la sección 9 con formularios validados por los esquemas de `@reconstruccion/contratos`.
-- [ ] Acciones visibles según rol, estado y responsable asignado; mensajes de error con código de regla.
-- [ ] `Dockerfile` (build + nginx con proxy `/api`).
+- [x] Proyecto Vite + React + TS, Mantine, React Router, TanStack Query, cliente HTTP con token.
+- [x] Pantallas de la sección 9 con formularios validados por los esquemas de `@reconstruccion/contratos`.
+- [x] Acciones visibles según rol, estado y responsable asignado; mensajes de error con código de regla.
+- [x] `Dockerfile` (build + nginx con proxy `/api`).
 
 **Aceptación:** con `pnpm dev`, cada uno de los tres actores puede completar sus casos de uso de la Figura 2 desde el navegador; `pnpm arq` confirma que `web` no importa dominio, aplicación ni infraestructura.
 **Commit:** `feat(web): interfaz React para autoridad, aprobador y responsable`

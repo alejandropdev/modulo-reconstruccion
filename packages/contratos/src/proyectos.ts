@@ -67,6 +67,7 @@ export const ResumenProyectoSalida = z.object({
   avanceFisico: z.number(),
   avanceFinanciero: z.number(),
   estaAtrasado: z.boolean(),
+  cambiosPendientes: z.number(),
 });
 
 export const DetalleProyectoSalida = ResumenProyectoSalida.extend({
@@ -92,7 +93,7 @@ export const DetalleProyectoSalida = ResumenProyectoSalida.extend({
       motivoResolucion: z.string().nullable(),
     }),
   ),
-  cambiosPendientes: z.array(z.string()),
+  cambiosPendientesIds: z.array(z.string()),
   hitos: z.array(
     z.object({
       id: z.string(),
@@ -161,3 +162,6 @@ export type ResumenProyectoSalida = z.infer<typeof ResumenProyectoSalida>;
 export type DetalleProyectoSalida = z.infer<typeof DetalleProyectoSalida>;
 export type ListaProyectosSalida = z.infer<typeof ListaProyectosSalida>;
 export type ReporteMasivoSalida = z.infer<typeof ReporteMasivoSalida>;
+export type CrearHitoEntrada = z.infer<typeof CrearHitoEntrada>;
+export type RegistrarCostoEntrada = z.infer<typeof RegistrarCostoEntrada>;
+export type SolicitarCambioPresupuestoEntrada = z.infer<typeof SolicitarCambioPresupuestoEntrada>;
