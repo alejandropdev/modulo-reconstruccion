@@ -1,0 +1,30 @@
+[
+  {
+    "id": "D-001",
+    "nombre": "Sismo de la costa pacífica",
+    "estado": "CARACTERIZACION",
+    "municipio": "Tumaco",
+    "fechaOcurrencia": "2026-01-15"
+  },
+  {
+    "id": "D-002",
+    "nombre": "Inundación del río Magdalena",
+    "estado": "RECONSTRUCCION",
+    "municipio": "Puerto Wilches",
+    "fechaOcurrencia": "2025-11-03"
+  },
+  {
+    "id": "D-003",
+    "nombre": "Deslizamiento en la vía al llano",
+    "estado": "REGISTRO",
+    "municipio": "Quetame",
+    "fechaOcurrencia": "2026-02-20"
+  },
+  {
+    "id": "D-004",
+    "nombre": "Vendaval en zona rural",
+    "estado": "CARACTERIZACION",
+    "municipio": "Sincelejo",
+    "fechaOcurrencia": "2026-02-02"
+  }
+]

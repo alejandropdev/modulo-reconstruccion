@@ -1,0 +1,82 @@
+[
+  {
+    "id": "E-11",
+    "desastreId": "D-001",
+    "activoId": "A-1",
+    "nivelDano": "SEVERO",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-12",
+    "desastreId": "D-001",
+    "activoId": "A-2",
+    "nivelDano": "MODERADO",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-21",
+    "desastreId": "D-002",
+    "activoId": "A-10",
+    "nivelDano": "SEVERO",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-22",
+    "desastreId": "D-002",
+    "activoId": "A-11",
+    "nivelDano": "LEVE",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-23",
+    "desastreId": "D-002",
+    "activoId": "A-12",
+    "nivelDano": "MODERADO",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-24",
+    "desastreId": "D-002",
+    "activoId": "A-13",
+    "nivelDano": "TOTAL",
+    "estado": "VALIDADA",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-25",
+    "desastreId": "D-002",
+    "activoId": "A-14",
+    "nivelDano": "SEVERO",
+    "estado": "BORRADOR",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-26",
+    "desastreId": "D-002",
+    "activoId": "A-15",
+    "nivelDano": "LEVE",
+    "estado": "VALIDADA",
+    "requiereIntervencion": false
+  },
+  {
+    "id": "E-41",
+    "desastreId": "D-004",
+    "activoId": "A-20",
+    "nivelDano": "LEVE",
+    "estado": "BORRADOR",
+    "requiereIntervencion": true
+  },
+  {
+    "id": "E-42",
+    "desastreId": "D-004",
+    "activoId": "A-21",
+    "nivelDano": "LEVE",
+    "estado": "VALIDADA",
+    "requiereIntervencion": false
+  }
+]
