@@ -12,6 +12,7 @@ export interface ResumenProyecto {
   avanceFisico: number;
   avanceFinanciero: number;
   estaAtrasado: boolean;
+  cambiosPendientes: number;
 }
 
 export interface DetalleProyecto extends ResumenProyecto {
@@ -33,7 +34,7 @@ export interface DetalleProyecto extends ResumenProyecto {
     resueltoEn: string | null;
     motivoResolucion: string | null;
   }[];
-  cambiosPendientes: string[];
+  cambiosPendientesIds: string[];
   hitos: {
     id: string;
     nombre: string;
@@ -75,6 +76,7 @@ export function aResumen(p: ProyectoReconstruccion, hoy: FechaCalendario): Resum
     avanceFisico: p.avanceFisico().valor,
     avanceFinanciero: p.avanceFinanciero(),
     estaAtrasado: p.estaAtrasado(hoy),
+    cambiosPendientes: p.cambiosPendientes().length,
   };
 }
 
@@ -105,7 +107,7 @@ export function aDetalle(p: ProyectoReconstruccion, hoy: FechaCalendario): Detal
       resueltoEn: c.resueltoEn ? iso(c.resueltoEn) : null,
       motivoResolucion: c.motivoResolucion,
     })),
-    cambiosPendientes: p.cambiosPendientes().map((c) => c.id),
+    cambiosPendientesIds: p.cambiosPendientes().map((c) => c.id),
     hitos: i.hitos.map((h) => ({
       id: h.id,
       nombre: h.nombre,
