@@ -556,15 +556,15 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(dominio): agregado ProyectoReconstruccion, políticas y reglas de negocio`
 
 ### Fase 3 — Casos de uso (`packages/aplicacion`)
-- [ ] Interfaces de los puertos de entrada y de salida (sección 4.3) y DTOs de entrada/salida de la aplicación (tipos planos).
-- [ ] `InteractorConAuditoria` (sección 4.4).
-- [ ] Los 20 interactores. Cada uno: autoriza el rol con `DirectorioUsuariosRoles`, valida las condiciones de otros módulos, carga el agregado, delega en la entidad, guarda/audita/publica en `UnidadDeTrabajo` y presenta.
-- [ ] `CrearProyecto`: R04, R05 (consulta `evaluacionesEnProyectosActivos`), C05, C06, valida que el responsable tenga rol `RESPONSABLE`.
-- [ ] `CrearProyectosMasivo`: reutiliza `CrearProyecto` ítem por ítem (C07) y arma el reporte.
-- [ ] `PasarAReconstruccion` y `CerrarDesastre`: usan `PoliticaCicloDesastre`, llaman `ActualizacionEstadoDesastre`, auditan y publican `DesastrePasoAReconstruccion` / `DesastreCerrado`.
-- [ ] `AdjuntarEvidencia`: valida con la entidad, guarda el archivo, agrega la evidencia; compensa eliminando el archivo si falla la transacción.
-- [ ] Fakes en memoria de todos los puertos de salida en `packages/aplicacion/test/fakes` (repositorio con control de versión, reloj fijo, auditoría y publicador que registran las llamadas, unidad de trabajo que hace rollback de los fakes si el trabajo lanza).
-- [ ] Pruebas por interactor: camino feliz, rol incorrecto (`NO_AUTORIZADO`), recurso inexistente (`NO_ENCONTRADO`), al menos una regla violada, auditoría de éxito y de rechazo, eventos publicados.
+- [x] Interfaces de los puertos de entrada y de salida (sección 4.3) y DTOs de entrada/salida de la aplicación (tipos planos).
+- [x] `InteractorConAuditoria` (sección 4.4).
+- [x] Los 20 interactores. Cada uno: autoriza el rol con `DirectorioUsuariosRoles`, valida las condiciones de otros módulos, carga el agregado, delega en la entidad, guarda/audita/publica en `UnidadDeTrabajo` y presenta.
+- [x] `CrearProyecto`: R04, R05 (consulta `evaluacionesEnProyectosActivos`), C05, C06, valida que el responsable tenga rol `RESPONSABLE`.
+- [x] `CrearProyectosMasivo`: reutiliza `CrearProyecto` ítem por ítem (C07) y arma el reporte.
+- [x] `PasarAReconstruccion` y `CerrarDesastre`: usan `PoliticaCicloDesastre`, llaman `ActualizacionEstadoDesastre`, auditan y publican `DesastrePasoAReconstruccion` / `DesastreCerrado`.
+- [x] `AdjuntarEvidencia`: valida con la entidad, guarda el archivo, agrega la evidencia; compensa eliminando el archivo si falla la transacción.
+- [x] Fakes en memoria de todos los puertos de salida en `packages/aplicacion/test/fakes` (repositorio con control de versión, reloj fijo, auditoría y publicador que registran las llamadas, unidad de trabajo que hace rollback de los fakes si el trabajo lanza).
+- [x] Pruebas por interactor: camino feliz, rol incorrecto (`NO_AUTORIZADO`), recurso inexistente (`NO_ENCONTRADO`), al menos una regla violada, auditoría de éxito y de rechazo, eventos publicados.
 
 **Aceptación:** cobertura de `aplicacion` ≥ 85 %; ningún interactor contiene una regla de la sección 2 que deba estar en la entidad (revisión manual: cada `if` de negocio está en dominio).
 **Commit:** `feat(aplicacion): interactores, puertos y pruebas con fakes`
