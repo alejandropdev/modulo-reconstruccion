@@ -613,9 +613,9 @@ Los errores de la API se muestran con su `mensaje` y el código de la regla (p. 
 **Commit:** `feat(web): interfaz React para autoridad, aprobador y responsable`
 
 ### Fase 8 — Docker Compose y documentación de uso
-- [ ] `docker-compose.yml` según la sección 10, `.env.example`.
-- [ ] `README.md`: requisitos, cómo levantar todo, usuarios de prueba, mapa de carpetas ↔ anillos de la arquitectura limpia, enlaces a ADRs y a la justificación.
-- [ ] `docs/guion-demo.md`: recorrido paso a paso para la sustentación que muestra R01, R05, R07, R08, R09, R12 (cambio sobre el umbral → pendiente → aprobado por otro usuario), R13, R14 y R15.
+- [x] `docker-compose.yml` según la sección 10, `.env.example`.
+- [x] `README.md`: requisitos, cómo levantar todo, usuarios de prueba, mapa de carpetas ↔ anillos de la arquitectura limpia, enlaces a ADRs y a la justificación.
+- [x] `docs/guion-demo.md`: recorrido paso a paso para la sustentación que muestra R01, R05, R07, R08, R09, R12 (cambio sobre el umbral → pendiente → aprobado por otro usuario), R13, R14 y R15.
 
 **Aceptación:** desde cero, `cp .env.example .env && docker compose up --build` deja la web en `http://localhost:8080` funcionando con los usuarios semilla.
 **Commit:** `chore: docker compose, README y guion de demostración`
