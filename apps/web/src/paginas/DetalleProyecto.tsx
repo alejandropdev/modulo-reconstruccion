@@ -23,6 +23,7 @@ import {
   RegistrarCostoEntrada,
   SolicitarCambioPresupuestoEntrada,
   TipoEvidencia,
+  type Contratista,
   type DetalleProyectoSalida,
 } from '@reconstruccion/contratos';
 import { useState } from 'react';
@@ -32,6 +33,7 @@ import { api } from '../api/cliente';
 import { mostrarError, useAccion, useProyecto } from '../api/hooks';
 import { useSesion } from '../auth/Sesion';
 import { fechaHora, pesos } from '../componentes/Dinero';
+import { ModalContratista } from '../componentes/ModalContratista';
 import { ModalMotivo } from '../componentes/ModalMotivo';
 
 type Proyecto = DetalleProyectoSalida;
@@ -96,7 +98,11 @@ function Acciones({ p }: { p: Proyecto }) {
   const [modal, setModal] = useState<'suspender' | 'reanudar' | 'cancelar' | null>(null);
   const sinCuerpo = (accion: string) => useAccion(() => api.post(`/proyectos/${p.id}/${accion}`), 'Hecho');
   const aprobar = sinCuerpo('aprobar');
-  const iniciar = sinCuerpo('iniciar');
+  const [pideContratista, setPideContratista] = useState(false);
+  const iniciar = useAccion(
+    (contratista?: Contratista) => api.post(`/proyectos/${p.id}/iniciar`, contratista ? { contratista } : {}),
+    'Hecho',
+  );
   const finalizar = sinCuerpo('finalizar');
   const conMotivo = useAccion(
     ({ accion, motivo }: { accion: string; motivo: string }) =>
@@ -113,7 +119,10 @@ function Acciones({ p }: { p: Proyecto }) {
         </Button>
       )}
       {esResponsable && p.estado === 'Aprobado' && (
-        <Button loading={iniciar.isPending} onClick={() => iniciar.mutate(undefined)}>
+        <Button
+          loading={iniciar.isPending}
+          onClick={() => (p.contratista ? iniciar.mutate(undefined) : setPideContratista(true))}
+        >
           Iniciar ejecución
         </Button>
       )}
@@ -135,6 +144,12 @@ function Acciones({ p }: { p: Proyecto }) {
           Cancelar proyecto
         </Button>
       )}
+      <ModalContratista
+        abierto={pideContratista}
+        alCerrar={() => setPideContratista(false)}
+        cargando={iniciar.isPending}
+        alConfirmar={(contratista) => iniciar.mutate(contratista, { onSuccess: () => setPideContratista(false) })}
+      />
       <ModalMotivo
         titulo={modal ? `Motivo para ${modal}` : ''}
         abierto={modal !== null}
