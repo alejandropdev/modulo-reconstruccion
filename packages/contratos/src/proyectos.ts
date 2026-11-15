@@ -157,7 +157,23 @@ export const ReporteMasivoSalida = z.object({
   ),
 });
 
+// Salidas de los comandos (lo que devuelve cada POST/PATCH/DELETE).
+export const CrearProyectoSalida = z.object({ proyectoId: z.string() });
+export const CambioEstadoProyectoSalida = z.object({ proyectoId: z.string(), estado: EstadoProyecto });
+export const RegistrarAvanceSalida = z.object({ avanceFisico: z.number() });
+export const RegistrarCostoSalida = z.object({ costoId: z.string(), costosEjecutados: Dinero });
+export const CambioPresupuestoSalida = z.object({
+  cambioId: z.string(),
+  estado: z.enum(['Aplicado', 'Pendiente', 'Aprobado', 'Rechazado', 'Anulado']),
+  valorVigente: Dinero,
+});
+export const HitoSalida = z.object({ hitoId: z.string() });
+export const EvidenciaSalida = z.object({ evidenciaId: z.string() });
+export const SaludSalida = z.object({ estado: z.string() });
+
+export type Contratista = z.infer<typeof Contratista>;
 export type CrearProyectoEntrada = z.infer<typeof CrearProyectoEntrada>;
+export type CrearProyectoSalida = z.infer<typeof CrearProyectoSalida>;
 export type ResumenProyectoSalida = z.infer<typeof ResumenProyectoSalida>;
 export type DetalleProyectoSalida = z.infer<typeof DetalleProyectoSalida>;
 export type ListaProyectosSalida = z.infer<typeof ListaProyectosSalida>;
